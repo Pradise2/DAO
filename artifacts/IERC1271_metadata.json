@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signature",
+						"type": "bytes"
+					}
+				],
+				"name": "isValidSignature",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "magicValue",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface of the ERC1271 standard signature validation method for contracts as defined in https://eips.ethereum.org/EIPS/eip-1271[ERC-1271].",
+			"kind": "dev",
+			"methods": {
+				"isValidSignature(bytes32,bytes)": {
+					"details": "Should return whether the signature provided is valid for the provided data",
+					"params": {
+						"hash": "Hash of the data to be signed",
+						"signature": "Signature byte array associated with _data"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Governance/Governance_flattened.sol": "IERC1271"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Governance/Governance_flattened.sol": {
+			"keccak256": "0x08465d7c8f62a0124fa15dccf148ce12bb31a58c9801172a7f6f64d35c93692d",
+			"urls": [
+				"bzz-raw://e17602818c92072ac76fe869085843871eeae46c2b890fbda8766fd40db311a6",
+				"dweb:/ipfs/QmTxws7Gm3hdWLTxws1e6meeBjwaZQbaZm1NPxaW3B9psq"
+			]
+		}
+	},
+	"version": 1
+}

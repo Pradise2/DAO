@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "QueueEmpty",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "QueueFull",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "QueueOutOfBounds",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "A sequence of items with the ability to efficiently push and pop items (i.e. insert and remove) on both ends of the sequence (called front and back). Among other access patterns, it can be used to implement efficient LIFO and FIFO queues. Storage use is optimized, and all operations are O(1) constant time. This includes {clear}, given that the existing queue contents are left in storage. The struct is called `Bytes32Deque`. Other types can be cast to and from `bytes32`. This data structure can only be used in storage, and not in memory. ```solidity DoubleEndedQueue.Bytes32Deque queue; ```",
+			"errors": {
+				"QueueEmpty()": [
+					{
+						"details": "An operation (e.g. {front}) couldn't be completed due to the queue being empty."
+					}
+				],
+				"QueueFull()": [
+					{
+						"details": "A push operation couldn't be completed due to the queue being full."
+					}
+				],
+				"QueueOutOfBounds()": [
+					{
+						"details": "An operation (e.g. {at}) couldn't be completed due to an index being out of bounds."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Governance/Governance_flattened.sol": "DoubleEndedQueue"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Governance/Governance_flattened.sol": {
+			"keccak256": "0x08465d7c8f62a0124fa15dccf148ce12bb31a58c9801172a7f6f64d35c93692d",
+			"urls": [
+				"bzz-raw://e17602818c92072ac76fe869085843871eeae46c2b890fbda8766fd40db311a6",
+				"dweb:/ipfs/QmTxws7Gm3hdWLTxws1e6meeBjwaZQbaZm1NPxaW3B9psq"
+			]
+		}
+	},
+	"version": 1
+}

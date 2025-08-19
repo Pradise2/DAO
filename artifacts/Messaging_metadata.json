@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "ipfsHash",
+						"type": "bytes"
+					}
+				],
+				"name": "MessageSent",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_ipfsHash",
+						"type": "bytes"
+					}
+				],
+				"name": "sendMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/utils/Messaging.sol": "Messaging"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/utils/Messaging.sol": {
+			"keccak256": "0x84bd943c3a0bab848dd8556f137054302ae310e0a7b6ba76645c0a03206638ee",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5691352bdf43f4d0ae43cf88eeeb9ed973dbb297ac9a4303752b930d6dfdf2b6",
+				"dweb:/ipfs/QmQvvQZr442eHzQncFpAXMeNArNY6M4z9UosEfUbNC1xzG"
+			]
+		}
+	},
+	"version": 1
+}

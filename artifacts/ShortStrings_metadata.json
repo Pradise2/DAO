@@ -1,0 +1,62 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InvalidShortString",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "str",
+						"type": "string"
+					}
+				],
+				"name": "StringTooLong",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "This library provides functions to convert short memory strings into a `ShortString` type that can be used as an immutable variable. Strings of arbitrary length can be optimized using this library if they are short enough (up to 31 bytes) by packing them with their length (1 byte) in a single EVM word (32 bytes). Additionally, a fallback mechanism can be used for every other case. Usage example: ```solidity contract Named {     using ShortStrings for *;     ShortString private immutable _name;     string private _nameFallback;     constructor(string memory contractName) {         _name = contractName.toShortStringWithFallback(_nameFallback);     }     function name() external view returns (string memory) {         return _name.toStringWithFallback(_nameFallback);     } } ```",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Governance/Governance_flattened.sol": "ShortStrings"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Governance/Governance_flattened.sol": {
+			"keccak256": "0x08465d7c8f62a0124fa15dccf148ce12bb31a58c9801172a7f6f64d35c93692d",
+			"urls": [
+				"bzz-raw://e17602818c92072ac76fe869085843871eeae46c2b890fbda8766fd40db311a6",
+				"dweb:/ipfs/QmTxws7Gm3hdWLTxws1e6meeBjwaZQbaZm1NPxaW3B9psq"
+			]
+		}
+	},
+	"version": 1
+}

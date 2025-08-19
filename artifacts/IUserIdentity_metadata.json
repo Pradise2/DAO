@@ -1,0 +1,161 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "getProfile",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "username",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "skills",
+								"type": "string"
+							},
+							{
+								"internalType": "bytes",
+								"name": "ipfsPortfolioHash",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reputationScore",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "projectsCompleted",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IUserIdentity.UserProfile",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "incrementProjectsCompleted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newScore",
+						"type": "uint256"
+					}
+				],
+				"name": "updateReputation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This interface defines the essential functions of the UserIdentity contract that other contracts in the ecosystem need to interact with. It allows for decoupled architecture, where contracts can communicate without having the full source code of the other, preventing circular dependencies and improving modularity.",
+			"kind": "dev",
+			"methods": {
+				"getProfile(address)": {
+					"params": {
+						"_user": "The address of the user."
+					},
+					"returns": {
+						"_0": "UserProfile A struct containing all of the user's profile data."
+					}
+				},
+				"incrementProjectsCompleted(address)": {
+					"details": "This is a protected function that should only be callable by an authorized contract      (e.g., the Project contract upon successful completion).",
+					"params": {
+						"_user": "The address of the user who completed a project."
+					}
+				},
+				"updateReputation(address,uint256)": {
+					"details": "This is a protected function that should only be callable by the authorized Reputation contract.",
+					"params": {
+						"_newScore": "The user's newly calculated reputation score.",
+						"_user": "The address of the user whose score is being updated."
+					}
+				}
+			},
+			"title": "IUserIdentity",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getProfile(address)": {
+					"notice": "Fetches the full profile for a given user address."
+				},
+				"incrementProjectsCompleted(address)": {
+					"notice": "Increments the completed projects counter for a user."
+				},
+				"updateReputation(address,uint256)": {
+					"notice": "Updates the reputation score for a given user."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/UserIdentity_flattened.sol": "IUserIdentity"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/core/UserIdentity_flattened.sol": {
+			"keccak256": "0xfb04b343cc8d806bd33b31b40aa08fa3664bb7792159f65fd94630e7b33b30d6",
+			"urls": [
+				"bzz-raw://a4d4228e4215d38681cb602590e4a476274967c67ceb22c41c7da8a51005f3b4",
+				"dweb:/ipfs/QmeErKjWkmV7fVHLawX3iVhsYCfF2RWNFqZgKxLNqHCKep"
+			]
+		}
+	},
+	"version": 1
+}

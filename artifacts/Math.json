@@ -1,0 +1,88 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f5ffdfea264697066735822122064b1e1a8c6fc1b18b5ca8c9760db8e8555f58827af3f8e495ffbad9b7eb357f264736f6c634300081e0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH5 0xB1E1A8C6FC SHL XOR 0xB5 0xCA DUP13 SWAP8 PUSH1 0xDB DUP15 DUP6 SSTORE CREATE2 DUP9 0x27 0xAF EXTCODEHASH DUP15 BLOBHASH PUSH0 EXTSTATICCALL 0xAD SWAP12 PUSH31 0xB357F264736F6C634300081E00330000000000000000000000000000000000 ",
+			"sourceMap": "4949:14914:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "730000000000000000000000000000000000000000301460806040525f5ffdfea264697066735822122064b1e1a8c6fc1b18b5ca8c9760db8e8555f58827af3f8e495ffbad9b7eb357f264736f6c634300081e0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH5 0xB1E1A8C6FC SHL XOR 0xB5 0xCA DUP13 SWAP8 PUSH1 0xDB DUP15 DUP6 SSTORE CREATE2 DUP9 0x27 0xAF EXTCODEHASH DUP15 BLOBHASH PUSH0 EXTSTATICCALL 0xAD SWAP12 PUSH31 0xB357F264736F6C634300081E00330000000000000000000000000000000000 ",
+			"sourceMap": "4949:14914:0:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17000",
+				"executionCost": "92",
+				"totalCost": "17092"
+			},
+			"internal": {
+				"average(uint256,uint256)": "infinite",
+				"ceilDiv(uint256,uint256)": "infinite",
+				"log10(uint256)": "infinite",
+				"log10(uint256,enum Math.Rounding)": "infinite",
+				"log2(uint256)": "infinite",
+				"log2(uint256,enum Math.Rounding)": "infinite",
+				"log256(uint256)": "infinite",
+				"log256(uint256,enum Math.Rounding)": "infinite",
+				"max(uint256,uint256)": "infinite",
+				"min(uint256,uint256)": "infinite",
+				"mulDiv(uint256,uint256,uint256)": "infinite",
+				"mulDiv(uint256,uint256,uint256,enum Math.Rounding)": "infinite",
+				"sqrt(uint256)": "infinite",
+				"sqrt(uint256,enum Math.Rounding)": "infinite",
+				"tryAdd(uint256,uint256)": "infinite",
+				"tryDiv(uint256,uint256)": "infinite",
+				"tryMod(uint256,uint256)": "infinite",
+				"tryMul(uint256,uint256)": "infinite",
+				"trySub(uint256,uint256)": "infinite",
+				"unsignedRoundsUp(enum Math.Rounding)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "MathOverflowedMulDiv",
+			"type": "error"
+		}
+	]
+}

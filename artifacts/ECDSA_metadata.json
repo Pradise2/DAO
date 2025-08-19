@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "ECDSAInvalidSignature",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "length",
+						"type": "uint256"
+					}
+				],
+				"name": "ECDSAInvalidSignatureLength",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "s",
+						"type": "bytes32"
+					}
+				],
+				"name": "ECDSAInvalidSignatureS",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "Elliptic Curve Digital Signature Algorithm (ECDSA) operations. These functions can be used to verify that a message was signed by the holder of the private keys of a given address.",
+			"errors": {
+				"ECDSAInvalidSignature()": [
+					{
+						"details": "The signature derives the `address(0)`."
+					}
+				],
+				"ECDSAInvalidSignatureLength(uint256)": [
+					{
+						"details": "The signature has an invalid length."
+					}
+				],
+				"ECDSAInvalidSignatureS(bytes32)": [
+					{
+						"details": "The signature has an S value that is in the upper half order."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Governance/Governance_flattened.sol": "ECDSA"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Governance/Governance_flattened.sol": {
+			"keccak256": "0x08465d7c8f62a0124fa15dccf148ce12bb31a58c9801172a7f6f64d35c93692d",
+			"urls": [
+				"bzz-raw://e17602818c92072ac76fe869085843871eeae46c2b890fbda8766fd40db311a6",
+				"dweb:/ipfs/QmTxws7Gm3hdWLTxws1e6meeBjwaZQbaZm1NPxaW3B9psq"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,400 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_initialOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "disputeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "escrowContract",
+						"type": "address"
+					}
+				],
+				"name": "DisputeOpened",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "disputeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DisputeResolution.Verdict",
+						"name": "verdict",
+						"type": "uint8"
+					}
+				],
+				"name": "DisputeResolved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "disputeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "juror",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DisputeResolution.Verdict",
+						"name": "vote",
+						"type": "uint8"
+					}
+				],
+				"name": "VoteCast",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_juror",
+						"type": "address"
+					}
+				],
+				"name": "addJuror",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_disputeId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DisputeResolution.Verdict",
+						"name": "_vote",
+						"type": "uint8"
+					}
+				],
+				"name": "castVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "disputeCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "disputes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "escrowContract",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "plaintiff",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "defendant",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "plaintiffVotes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "defendantVotes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DisputeResolution.DisputeStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "enum DisputeResolution.Verdict",
+						"name": "verdict",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "hasJurorVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isJuror",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_escrowContract",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_plaintiff",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_defendant",
+						"type": "address"
+					}
+				],
+				"name": "openDispute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_juror",
+						"type": "address"
+					}
+				],
+				"name": "removeJuror",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_disputeId",
+						"type": "uint256"
+					}
+				],
+				"name": "resolveDispute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Governance/DisputeResolution_flattened.sol": "DisputeResolution"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Governance/DisputeResolution_flattened.sol": {
+			"keccak256": "0x67a38a27c24d7f4cdcbc87aa1f707f3beca45a42c7895f1bc9c1a1c5c4134528",
+			"urls": [
+				"bzz-raw://103ac80e87fc1887fb501532c3b2541b693dd08551c9b1465bd451d90df7b7f0",
+				"dweb:/ipfs/QmdYhGtwBMYi8uSkEeCiCdPqSqTckS2dJnxntMTZiKuny9"
+			]
+		}
+	},
+	"version": 1
+}
