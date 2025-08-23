@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -11,4 +12,5 @@ contract PaymentGateway is Ownable {
     function setFeeBps(uint256 _newFeeBps) external onlyOwner { require(_newFeeBps <= 1000, "Fee cannot exceed 10%"); platformFeeBps = _newFeeBps; emit FeeUpdated(_newFeeBps); }
     function setFeeRecipient(address _newRecipient) external onlyOwner { require(_newRecipient != address(0), "Cannot set recipient to zero address"); feeRecipient = _newRecipient; emit RecipientUpdated(_newRecipient); }
     function setCallerAuthority(address _caller, bool _authorized) external onlyOwner { isAuthorizedCaller[_caller] = _authorized; emit AuthorityUpdated(_caller, _authorized); }
+
 }
