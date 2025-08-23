@@ -25,7 +25,7 @@
 
 **The Architect** is a fully decentralized platform designed to connect freelancers and clients in a trustless, transparent, and fair environment. It replaces the traditional middleman with a sophisticated system of 15 interconnected smart contracts, empowering users with self-sovereign identity, on-chain reputation, and direct control over their funds. The entire ecosystem is governed by its community through a DAO.
 
-## 📖 Table of Contents
+## 📖 Table of Content
 
 - [✨ Core Concepts](#-core-concepts)
 - [🛠️ Technology Stack](#️-technology-stack)
@@ -207,4 +207,5 @@ Open a Pull Request
 This project is licensed under the MIT License.
 
 See the LICENSE file for details.
+
 
